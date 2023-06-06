@@ -1,0 +1,169 @@
+* {
+  /* o * é o seletor universal, e aqui estamos zerando as o margin e o padding*/
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+
+:root {
+  --text-color: white;
+  --bg-url: url(/assets/bc-mobile.jpg);
+  --stroke-color: rgba(255, 255, 255, 0.5);
+  --surface-color: rgba(255, 255, 255, 0.5)));
+  --surface-color-hover: rgba(0, 0, 0, 0.02));
+  --highlight-color: rgba(255, 255, 255, 0.2);
+  --switch-bg-url: url(/assets/moon-stars.svg);
+}
+
+.light {
+  --text-color: black;
+  --bg-url: url(/assets/bg-mobile-light.jpg);
+  --stroke-color: rgba(0, 0, 0, 0.5);
+  --surface-color: rgba(0, 0, 0, 0.05);
+  --surface-color-hover: rgba(0, 0, 0, 0.02);
+  --highlight-color: rgba(0, 0, 0, 0.1);
+  --switch-bg-url: url(/assets/sun.svg);
+}
+
+body {
+  /*
+  background-image: url(/assets/bc-mobile.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover; 
+  */
+  /* background: color image repeat position/size*/
+  background: var(--bg-url) no-repeat top center/cover;
+}
+
+body * {
+  font-family: "Inter", sans-serif;
+  color: var(--text-color);
+}
+#container {
+  width: 360px;
+  margin: 56px auto 0px;
+  padding: 0 24px;
+}
+
+#profile {
+  /*Pai da imagem profile abaixo*/
+  text-align: center;
+  padding: 24px;
+}
+
+#profile img {
+  /*A imagem é alignig e por isso não aceita o margin auto por isso deve ser colocado no pai algumas coisas veha #profile acima*/
+  width: 112px;
+}
+
+#profile p {
+  font-weight: 500;
+  line-height: 24px;
+  margin-top: 8px;
+}
+
+/*switch*/
+#switch {
+  position: relative;
+  width: 64px;
+
+  margin: 4px auto;
+}
+#switch button {
+  width: 32px;
+  height: 32px;
+  background: white var(--switch-bg-url) no-repeat center;
+  border: 0;
+  border-radius: 50%;
+
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 1;
+  transform: translateY(-50%);
+}
+
+.light #switch button {
+  right: 0;
+  left: initial;
+}
+
+#switch span {
+  display: block;
+  width: 64px;
+  height: 32px;
+  background: var(--surface-color);
+
+  border: 1px solid var(--stroke-color);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 9999px;
+}
+
+/*Links*/
+ul {
+  list-style: none;
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  padding: 24px 0;
+  /*display: flex;
+  flex-direction: column;
+  gap: 8px;*/
+}
+
+ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 16px 24px;
+
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  border-radius: 8px;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+
+  text-decoration: none;
+  font-weight: 500;
+
+  transition: all 0.2s; /*melhora a transição do houver do ul li a*/
+}
+
+ul li a:hover {
+  /*é o efeito dos botões*/
+  background: var(--surface-color-hover);
+  border: 1px solid var(--text-color);
+}
+
+#social_links {
+  display: flex;
+  justify-content: center;
+
+  padding: 24px 0;
+  font-size: 24px;
+}
+
+#social_links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+
+  transition: background 0.2s;
+  border-radius: 50%;
+}
+
+#social_links a:hover {
+  background: var(--highlight-color);
+  padding: 16px;
+}
+
+footer {
+  padding: 24px 0;
+  text-align: center;
+  font-size: 14px;
+}
