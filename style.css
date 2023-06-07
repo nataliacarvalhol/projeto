@@ -9,8 +9,8 @@
   --text-color: white;
   --bg-url: url(/assets/bc-mobile.jpg);
   --stroke-color: rgba(255, 255, 255, 0.5);
-  --surface-color: rgba(255, 255, 255, 0.5)));
-  --surface-color-hover: rgba(0, 0, 0, 0.02));
+  --surface-color: rgba(255, 255, 255, 0.5);
+  --surface-color-hover: rgba(0, 0, 0, 0.02);
   --highlight-color: rgba(255, 255, 255, 0.2);
   --switch-bg-url: url(/assets/moon-stars.svg);
 }
@@ -192,7 +192,7 @@ footer {
 }
 
 /*animation*/
-@keyframes slide-in{
+@keyframes slide-in {
   from {
     left: 0;
   }
